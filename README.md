@@ -86,34 +86,41 @@ Une fois démarrée, l'application écoute sur le port : http://localhost:8080
 
 ### 1️⃣ Connexion avec le compte `user`
 
+<img width="1652" height="582" alt="userLogin" src="https://github.com/user-attachments/assets/61cc5aac-9693-4c13-b333-e6cdc10e3cc5" />
 
+<img width="510" height="168" alt="connexion" src="https://github.com/user-attachments/assets/73ad6540-32d7-4155-9845-721389013202" />
 
 ---
 
 ### 2️⃣ Connexion avec le compte `admin`
 
+<img width="1628" height="593" alt="adminLogin" src="https://github.com/user-attachments/assets/c4f19432-47a4-4995-bc20-f67f37c62519" />
 
+<img width="510" height="168" alt="connexion" src="https://github.com/user-attachments/assets/60c17a9c-96c2-4602-ad1e-3c2c7706f952" />
 
 ---
 
 ### 3️⃣ Accès au tableau de bord utilisateur `/user/dashboard`
 
+<img width="647" height="162" alt="userDash" src="https://github.com/user-attachments/assets/2d2d59be-b89a-4711-9fe2-c6a64e72814d" />
 
 
 ---
 
 ### 4️⃣ Accès au tableau de bord administrateur `/admin/dashboard`
 
+<img width="535" height="152" alt="adminDash" src="https://github.com/user-attachments/assets/5b887a09-1803-4895-b4c9-17a562071b53" />
 
 
 ---
 
 ### 5️⃣ Accès refusé à `/admin/dashboard` depuis le compte `user`
 
+<img width="746" height="292" alt="accesUserAdmin" src="https://github.com/user-attachments/assets/28efe7a9-470a-43ea-8ab5-48bbc9764e46" />
 
 ---
 
 # 👩‍💻 Auteur
 
-- Nom : *[Ton nom]*
-- Filière : *[Ta filière]* Sonnet 4.6
+- Nom : Malak El Mallouky
+- Filière : SIR
