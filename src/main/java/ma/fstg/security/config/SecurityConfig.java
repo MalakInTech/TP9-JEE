@@ -14,30 +14,30 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails admin = User.withUsername("admin")
-                .password("{noop}1234") // {noop} = pas d'encodage
+        UserDetails administrateur = User.withUsername("admin")
+                .password("{noop}1234") // mot de passe sans encodage pour le TP
                 .roles("ADMIN")
                 .build();
 
-        UserDetails user = User.withUsername("user")
-                .password("{noop}1111")
+        UserDetails utilisateur = User.withUsername("user")
+                .password("{noop}1111") // mot de passe sans encodage pour le TP
                 .roles("USER")
                 .build();
 
-        return new InMemoryUserDetailsManager(admin, user);
+        return new InMemoryUserDetailsManager(administrateur , utilisateur);
     }
 
     @Bean
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login").permitAll()  // ← cette ligne est obligatoire
+                        .requestMatchers("/login").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        .loginPage("/login")    // ← tu dis à Spring d'utiliser TA page
+                        .loginPage("/login")
                         .permitAll()
                 )
                 .logout(logout -> logout

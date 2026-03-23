@@ -28,6 +28,5 @@ public class HomeController {
 
     @GetMapping("/login")
     public String loginPage() {
-        return "login";   // renvoie vers templates/login.html
-    }
+        return "login";   }
 }
