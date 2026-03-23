@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; margin-top: 80px; }
+        .login-box { border: 1px solid #ddd; padding: 32px; border-radius: 8px; width: 300px; }
+        h2 { margin-top: 0; }
+        label { display: block; margin-top: 12px; font-size: 14px; }
+        input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { margin-top: 20px; width: 100%; padding: 10px; background: #1a73e8; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 15px; }
+        .error { color: red; font-size: 13px; margin-top: 8px; }
+        .logout { color: green; font-size: 13px; margin-top: 8px; }
+    </style>
+</head>
+<body>
+<div class="login-box">
+    <h2>Authentification</h2>
+
+    <!-- Message d'erreur si identifiants incorrects -->
+    <p class="error" th:if="${param.error}">Identifiants incorrects.</p>
+
+    <!-- Message de déconnexion réussie -->
+    <p class="logout" th:if="${param.logout}">Déconnexion réussie.</p>
+
+    <form th:action="@{/login}" method="post">
+        <label>Nom d'utilisateur :</label>
+        <input type="text" name="username" />
+
+        <label>Mot de passe :</label>
+        <input type="password" name="password" />
+
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
+</body>
+</html>
